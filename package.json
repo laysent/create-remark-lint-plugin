@@ -1,0 +1,20 @@
+{
+  "name": "create-remark-lint-plugin",
+  "version": "0.1.0",
+  "description": "scaffold to create an initial project for remark lint plugin",
+  "keywords": [
+    "scaffold",
+    "remark-lint"
+  ],
+  "author": "LaySent <laysent@gmail.com>",
+  "homepage": "https://github.com/laysent/create-remark-lint-plugin",
+  "license": "MIT",
+  "bin": "index.js",
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "git-user-email": "^0.2.2",
+    "git-user-name": "^2.0.0",
+    "prompts": "^2.0.3",
+    "yargs": "^13.2.1"
+  }
+}

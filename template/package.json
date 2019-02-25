@@ -1,0 +1,39 @@
+{
+  "name": "%PACKAGE_NAME%",
+  "private": true,
+  "version": "1.0.0",
+  "author": "%USERNAME% <%EMAIL%>",
+  "bugs": {
+    "url": "https://github.com/%GIT_USERNAME%/%PACKAGE_NAME%/issues"
+  },
+  "homepage": "https://github.com/%GIT_USERNAME%/%PACKAGE_NAME%",
+  "description": "remark lint plugin that ...",
+  "keywords": [
+    "remark",
+    "remark-lint",
+    "lint",
+    "rule"
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/%GIT_USERNAME%/%PACKAGE_NAME%.git"
+  },
+  "dependencies": {
+    "unified-lint-rule": "^1.0.3",
+    "unist-util-visit": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "5.3.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^24.1.0",
+    "remark": "^10.0.1",
+    "to-vfile": "^5.0.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint *.js"
+  }
+}
