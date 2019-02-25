@@ -56,7 +56,7 @@ prompts([
   const files = fs.readdirSync(template);
   files.forEach((file) => {
     const from = path.resolve(template, file);
-    const to = path.resolve(destination, file);
+    const to = path.resolve(destination, file[0] === '_' ? file.substr(1) : file);
     let content = fs.readFileSync(from, 'utf8');
     content = inject(content, {
       LINT_NAME: lintName,
