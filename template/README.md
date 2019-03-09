@@ -1,4 +1,4 @@
-# %PACKAGE_NAME
+# %PACKAGE_NAME%
 
 Warn when <!-- how plugin works, goes here -->
 

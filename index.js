@@ -5,8 +5,16 @@ const path = require('path');
 const fse = require('fs-extra');
 const prompts = require('prompts');
 const getGitUserName = require('git-user-name');
-const getGitEmail = require('git-user-email');
+const gitconfig = require('git-config-path');
+const parse = require('parse-git-config');
 const argv = require('yargs').argv;
+
+function getGitEmail() {
+  var gc = gitconfig({ type: 'global' });
+  var options = { cwd: '/', path: gc };
+  var config = parse.sync(options) || {};
+  return config.user ? config.user.email : null;
+}
 
 const prefix = 'remark-lint-';
 let name = argv.name || '';

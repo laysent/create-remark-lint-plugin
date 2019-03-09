@@ -2,7 +2,7 @@
   "name": "%PACKAGE_NAME%",
   "private": true,
   "version": "1.0.0",
-  "author": "%USERNAME% <%EMAIL%>",
+  "author": "%GIT_USERNAME% <%GIT_EMAIL%>",
   "bugs": {
     "url": "https://github.com/%GIT_USERNAME%/%GIT_REPO_NAME%/issues"
   },
