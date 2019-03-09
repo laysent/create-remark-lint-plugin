@@ -3,10 +3,10 @@ const vfile = require('to-vfile');
 const rule = require('.');
 
 describe('%LINT_NAME%', () => {
-  function process(markdown) {
+  function process(markdown, config) {
     return new Promise((resolve, reject) => {
       remark()
-        .use(rule)
+        .use(rule, config)
         .process(vfile({ path: 'input.md', contents: markdown }), (error, file) => {
           if (error) reject(error);
           else resolve(file.messages.map(String));
