@@ -9,11 +9,13 @@ const getGitEmail = require('git-user-email');
 const argv = require('yargs').argv;
 
 const prefix = 'remark-lint-';
-let name = argv._.length > 0 ? argv._[0] : '';
-const folder = argv.folder || '';
+let name = argv.name || '';
+const useMonoRepo = !!argv.mono;
+const folder = argv.folder || (useMonoRepo ? 'packages' : '');
 const template = path.resolve(__dirname, 'template');
 const displayName = getGitUserName();
 const email = getGitEmail();
+const currentFolder = path.parse(process.cwd()).base;
 
 function inject(content, config) {
   return Object.keys(config).reduce((text, key) => {
@@ -62,6 +64,7 @@ prompts([
     let content = fs.readFileSync(from, 'utf8');
     content = inject(content, {
       LINT_NAME: lintName,
+      GIT_REPO_NAME: useMonoRepo ? currentFolder : packageName,
       PACKAGE_NAME: packageName,
       GIT_USERNAME: result.username,
       GIT_EMAIL: email,

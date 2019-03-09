@@ -72,4 +72,4 @@ Or use this on the API:
 
 ## License
 
-[MIT](https://github.com/%GIT_USERNAME%/%PACKAGE_NAME%/blob/master/LICENSE) © [%GIT_DISPLAYNAME%](https://github.com/%GIT_USERNAME%)
+[MIT](https://github.com/%GIT_USERNAME%/%GIT_REPO_NAME%/blob/master/LICENSE) © [%GIT_DISPLAYNAME%](https://github.com/%GIT_USERNAME%)
