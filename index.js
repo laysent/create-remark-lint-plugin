@@ -21,8 +21,8 @@ let name = argv.name || '';
 const useMonoRepo = !!argv.mono;
 const folder = argv.folder || (useMonoRepo ? 'packages' : '');
 const template = path.resolve(__dirname, 'template');
-const displayName = getGitUserName();
-const email = getGitEmail();
+const displayName = getGitUserName() || '';
+const email = getGitEmail() || '';
 const currentFolder = path.parse(process.cwd()).base;
 
 function inject(content, config) {
