@@ -1,6 +1,6 @@
 {
   "name": "create-remark-lint-plugin",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "scaffold to create an initial project for remark lint plugin",
   "keywords": [
     "scaffold",
